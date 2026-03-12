@@ -1,4 +1,3 @@
-// src/components/About.tsx
 
 import React from "react";
 import { motion } from "framer-motion";
@@ -10,7 +9,7 @@ const About: React.FC = () => {
     triggerOnce: true,
     threshold: 0.1
   });
-  // Container animation
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -22,7 +21,7 @@ const About: React.FC = () => {
     },
   };
 
-  // Item animation
+  
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
