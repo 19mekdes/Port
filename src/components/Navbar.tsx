@@ -1,4 +1,4 @@
-// src/components/Navbar.tsx
+
 import React, { useState, useEffect } from 'react';
 
 interface NavbarProps {
