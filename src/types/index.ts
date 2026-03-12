@@ -1,4 +1,4 @@
-// src/types/index.ts
+
 export interface Project {
   id: number;
   title: string;
@@ -20,13 +20,13 @@ export interface SkillCategory {
   skills: Skill[];
 }
 
-export interface IContactFormData {  // Renamed with I prefix
+export interface IContactFormData {  
   name: string;
   email: string;
   message: string;
 }
 
-export interface IFormErrors {  // Renamed with I prefix
+export interface IFormErrors {  
   name?: string;
   email?: string;
   message?: string;
