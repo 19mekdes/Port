@@ -32,6 +32,5 @@ export interface IFormErrors {
   message?: string;
 }
 
-// Also export as a type
 export type ContactFormData = IContactFormData;
 export type FormErrors = IFormErrors;
