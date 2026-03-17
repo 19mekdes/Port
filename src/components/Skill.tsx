@@ -56,7 +56,7 @@ const Skills: React.FC = () => {
         </motion.div>
 
         {viewMode === 'bars' ? (
-          /* Progress Bars View */
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skillsData.map((category, categoryIndex) => (
               <motion.div
