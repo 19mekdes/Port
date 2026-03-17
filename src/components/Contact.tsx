@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import type { ContactFormData, FormErrors } from '../types'; // Changed import
- // Changed import
+
 
 const Contact: React.FC = () => {
   const [ref, inView] = useInView({
