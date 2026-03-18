@@ -23,11 +23,11 @@ export const projectsData: Project[] = [
   },
   {
     id: 3,
-    title: 'Weather Dashboard',
-    description: 'Real-time weather application with interactive maps and 7-day forecasts.',
-    techStack: ['JavaScript', 'APIs', 'Chart.js', 'CSS3'],
-    githubUrl: 'https://github.com/19mekdes/weather',
-    liveUrl: 'https://weather-demo.com',
+    title: 'doctor appointment system',
+    description: 'A web-based application for scheduling and managing doctor appointments.',
+    techStack: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+    githubUrl: 'https://github.com/19mekdes/doctor-appointment',
+    liveUrl: 'https://doctor-appointment-demo.com',
     imageUrl: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
   },
 ];
