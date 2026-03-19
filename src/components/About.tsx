@@ -44,7 +44,7 @@ const About: React.FC = () => {
         className="max-w-4xl mx-auto"
       >
 
-        {/* Title */}
+        
         <motion.h2
           variants={itemVariants}
           className="text-3xl sm:text-4xl font-bold text-center text-gray-900 dark:text-white mb-12"
