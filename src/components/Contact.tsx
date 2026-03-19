@@ -66,7 +66,6 @@ const Contact: React.FC = () => {
 
     setIsSubmitting(true);
 
-    // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1500));
 
     setIsSubmitting(false);
