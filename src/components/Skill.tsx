@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { skillsData } from '../data/skillsData';
+import { skillsData } from '../data/SkillData';
 
 const Skills: React.FC = () => {
   const [ref, inView] = useInView({
@@ -100,7 +100,7 @@ const Skills: React.FC = () => {
             ))}
           </div>
         ) : (
-          /* Badges View */
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skillsData.map((category, categoryIndex) => (
               <motion.div
