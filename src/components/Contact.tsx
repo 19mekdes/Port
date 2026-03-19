@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
     setIsSubmitted(true);
     setFormData({ name: '', email: '', message: '' });
 
-    // Reset success message after 5 seconds
+    
     setTimeout(() => setIsSubmitted(false), 5000);
   };
 
