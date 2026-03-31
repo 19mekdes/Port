@@ -1,7 +1,15 @@
 import React from 'react';
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+
+  const socials = [
+    { name: 'GitHub', icon: <FaGithub />, url: 'https://github.com/19mekdes' },
+    { name: 'LinkedIn', icon: <FaLinkedin />, url: 'https://linkedin.com/in/yourprofile' },
+    { name: 'Twitter', icon: <FaTwitter />, url: 'https://twitter.com/yourhandle' },
+    { name: 'Email', icon: <FaEnvelope />, url: 'mailto:youremail@example.com' },
+  ];
 
   return (
     <footer className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
@@ -39,15 +47,17 @@ const Footer: React.FC = () => {
               Connect
             </h3>
             <div className="flex space-x-4">
-              {['GitHub', 'LinkedIn', 'Twitter', 'Email'].map((social) => (
+              {socials.map((social) => (
                 <a
-                  key={social}
-                  href="#"
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
                 >
-                  <span className="sr-only">{social}</span>
-                  <div className="w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center">
-                    {social[0]}
+                  <span className="sr-only">{social.name}</span>
+                  <div className="w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center text-xl">
+                    {social.icon}
                   </div>
                 </a>
               ))}
