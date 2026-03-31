@@ -61,21 +61,13 @@ const About: React.FC = () => {
             variants={itemVariants}
             className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto"
           >
-            I'm a passionate Full Stack Developer with over 5 years of experience
-            in building web applications that solve real-world problems. My journey
-            in tech started when I built my first website at the age of 16, and I've
-            been hooked ever since.
+           I am a Full Stack Developer with 1 year of experience building web applications. 
+           I started coding in university and have enjoyed learning and creating projects ever since. 
+           I mainly work with React, Node.js, and TypeScript, and I love exploring new technologies and solving real-world problems.
+           In my free time, I enjoy hiking, reading sci-fi books, and experimenting with new recipes.
           </motion.p>
 
-          <motion.p
-            variants={itemVariants}
-            className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto"
-          >
-            I specialize in React, Node.js, and TypeScript, but I'm always excited
-            to learn new technologies and tackle challenging projects. When I'm not
-            coding, you can find me hiking, reading sci-fi novels, or experimenting
-            with new recipes in the kitchen.
-          </motion.p>
+          
 
           {/* Download CV Button */}
           <motion.div

@@ -1,33 +1,88 @@
-
 import type { Project } from '../types';
 
 export const projectsData: Project[] = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
+    title: 'Product Catalog website',
     description: 'A full-featured e-commerce platform with product management, cart functionality, and payment integration.',
-    techStack: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+    techStack: ['React', 'TypeScript', 'Tailwind CSS'],
     githubUrl: 'https://github.com/19mekdes/ecommerce',
     liveUrl: 'https://ecommerce-demo.com',
-    imageUrl: 'https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    imageUrl: '/images/productCatalog.jpg',  // local image in public/images
     featured: true,
   },
   {
     id: 2,
-    title: 'Task Management App',
+    title: 'Book Review System',
     description: 'A collaborative task management tool with real-time updates and team features.',
-    techStack: ['React', 'TypeScript', 'Firebase', 'Tailwind CSS'],
+    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Postgres'],
     githubUrl: 'https://github.com/19mekdes/taskapp',
     liveUrl: 'https://taskapp-demo.com',
-    imageUrl: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    imageUrl: '/images/BookReview.jpg',  // local image in public/images
   },
   {
     id: 3,
-    title: 'doctor appointment system',
+    title: 'Book Appointment System',
     description: 'A web-based application for scheduling and managing doctor appointments.',
-    techStack: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+    techStack: ['React', 'Node.js', 'MongoDB'],
     githubUrl: 'https://github.com/19mekdes/doctor-appointment',
     liveUrl: 'https://doctor-appointment-demo.com',
-    imageUrl: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    imageUrl: '/images/Bookappointementwithdoctors.jpg',  // local image in public/images
+  },
+
+  {
+    id: 4,
+    title: 'Dental Clinic Management System',
+    description: 'A comprehensive solution for managing dental clinic operations, including patient records, appointment scheduling, and treatment tracking.',
+    techStack: ['React', 'Bootstrap CSS', 'NODE.js', 'MongoDB'],
+    githubUrl: 'https://github.com/19mekdes/dental-clinic',
+    liveUrl: 'https://dental-clinic-demo.com',
+    imageUrl: '/images/dental-clinic.jpg',
+  },
+  {
+    id: 5,
+    title: 'Portfolio Website',
+    description: 'Modern portfolio website with animations and responsive design.',
+    techStack: ['React', 'TypeScript', 'Framer Motion', 'Tailwind CSS'],
+    githubUrl: 'https://github.com/19mekdes/portfolio',
+    liveUrl: 'https://portfolio-demo.com',
+    imageUrl: '/images/portfolio.jpg',
+    featured: true,
+  },
+  {
+    id: 6,
+    title: 'Video Call Application',
+    description: 'Real-time video conferencing app with screen sharing and recording features.',
+    techStack: ['HTML', 'JavaScript', 'CSS'],
+    githubUrl: 'https://github.com/19mekdes/video-call-app',
+    liveUrl: 'https://video-call-app-demo.com',
+    imageUrl: '/images/video-call-app.jpg',
+  },
+  {
+    id: 7,
+   title: 'E-commerce Website',
+description: 'An online store showcasing traditional Habesha dresses, featuring product browsing, cart functionality, and seamless payment integration.',
+    techStack: ['HTML', 'JavaScript', 'Bootstrap CSS'],
+    githubUrl: 'https://github.com/19mekdes/ecommerce',
+    liveUrl: 'https://ecommerce-demo.com',
+    imageUrl: '/images/ecommerce.jpg',
+  },
+  {
+    id: 8,
+   title: 'Nutrition Tracker',
+description: 'A web application for tracking daily nutrition intake and managing dietary goals.',
+    techStack: ['React', 'JavaScript', 'Bootstrap CSS'],
+    githubUrl: 'https://github.com/19mekdes/nutrition-tracker',
+    liveUrl: 'https://nutrition-tracker-demo.com',
+    imageUrl: '/images/nutrition.jpg',
+  },
+  {
+    id: 9,
+   title: 'Task Management System',
+description: 'A web application for managing tasks and projects with real-time updates and collaboration features.',
+    techStack: ['React', 'TypeScript', 'Tailwind CSS'],
+    githubUrl: 'https://github.com/19mekdes/task-management',
+    liveUrl: 'https://task-management-demo.com',
+    imageUrl: '/images/task-management.jpg',
   },
 ];

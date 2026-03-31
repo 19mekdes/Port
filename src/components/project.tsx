@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { projectsData } from '../data/projectsData';
@@ -9,6 +8,41 @@ const Projects: React.FC = () => {
     triggerOnce: true,
     threshold: 0.1,
   });
+
+  // Pagination state
+  const [currentPage, setCurrentPage] = useState(1);
+  const projectsPerPage = 3;
+
+  // Calculate pagination - FIXED
+  const indexOfLastProject = currentPage * projectsPerPage;
+  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
+  const currentProjects = projectsData.slice(indexOfFirstProject, indexOfLastProject);
+  const totalPages = Math.ceil(projectsData.length / projectsPerPage);
+
+  // Change page functions - FIXED
+  const goToPage = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const goToNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const goToPrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  // Debug: Log to see what's happening
+  console.log('Current Page:', currentPage);
+  console.log('Total Projects:', projectsData.length);
+  console.log('Index First:', indexOfFirstProject);
+  console.log('Index Last:', indexOfLastProject);
+  console.log('Current Projects Count:', currentProjects.length);
+  console.log('Total Pages:', totalPages);
 
   return (
     <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
@@ -29,21 +63,27 @@ const Projects: React.FC = () => {
           </p>
         </motion.div>
 
+        {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projectsData.map((project, index) => (
+          {currentProjects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -10 }}
+              style={{}}
               className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <div className="relative h-48 overflow-hidden">
                 <img
-                  src={project.imageUrl || 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'}
+                  src={project.imageUrl}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = 'https://via.placeholder.com/400x300?text=No+Image';
+                  }}
                 />
                 {project.featured && (
                   <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -107,6 +147,56 @@ const Projects: React.FC = () => {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Pagination Controls - FIXED */}
+        {totalPages > 1 && (
+          <div className="flex justify-center items-center gap-3 mt-12 flex-wrap">
+            <button
+              onClick={goToPrevPage}
+              disabled={currentPage === 1}
+              className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
+                currentPage === 1
+                  ? 'bg-gray-200 text-gray-500 cursor-not-allowed dark:bg-gray-700 dark:text-gray-400'
+                  : 'bg-blue-600 text-white hover:bg-blue-700 active:scale-95'
+              }`}
+            >
+              ← Previous
+            </button>
+
+            <div className="flex gap-2">
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                <button
+                  key={page}
+                  onClick={() => goToPage(page)}
+                  className={`w-10 h-10 rounded-lg font-semibold transition-all duration-300 ${
+                    currentPage === page
+                      ? 'bg-blue-600 text-white scale-105'
+                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
+                  }`}
+                >
+                  {page}
+                </button>
+              ))}
+            </div>
+
+            <button
+              onClick={goToNextPage}
+              disabled={currentPage === totalPages}
+              className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
+                currentPage === totalPages
+                  ? 'bg-gray-200 text-gray-500 cursor-not-allowed dark:bg-gray-700 dark:text-gray-400'
+                  : 'bg-blue-600 text-white hover:bg-blue-700 active:scale-95'
+              }`}
+            >
+              Next →
+            </button>
+          </div>
+        )}
+
+        {/* Project Counter - FIXED */}
+        <div className="text-center mt-6 text-gray-600 dark:text-gray-400">
+          Showing {indexOfFirstProject + 1} - {Math.min(indexOfLastProject, projectsData.length)} of {projectsData.length} projects
         </div>
       </div>
     </div>
