@@ -14,10 +14,10 @@ export const projectsData: Project[] = [
   {
     id: 2,
     title: 'Book Review System',
-    description: 'A collaborative task management tool with real-time updates and team features.',
+    description: 'A full-stack web application that allows users to browse books, write reviews, rate content, and manage their reading experience with user authentication and dynamic features.',
     techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Postgres'],
     githubUrl: 'https://github.com/19mekdes/book-review-system.git',
-    liveUrl: 'https://taskapp-demo.com',
+    liveUrl: 'https://book-review-demo.com',
     imageUrl: '/images/BookReview.jpg',  
   },
   {
@@ -69,8 +69,8 @@ description: 'An online store showcasing traditional Habesha dresses, featuring 
   },
   {
     id: 8,
-   title: 'Nutrition Tracker',
-description: 'A web application for tracking daily nutrition intake and managing dietary goals.',
+    title: 'Nutrition Tracker',
+    description: 'A web application for tracking daily nutrition intake and managing dietary goals.',
     techStack: ['React', 'JavaScript', 'Bootstrap CSS'],
     githubUrl: 'https://github.com/19mekdes/nutritional-harmony.git',
     liveUrl: 'https://nutrition-tracker-demo.com',
@@ -78,8 +78,8 @@ description: 'A web application for tracking daily nutrition intake and managing
   },
   {
     id: 9,
-   title: 'Task Management System',
-description: 'A web application for managing tasks and projects with real-time updates and collaboration features.',
+    title: 'Task Management System',
+    description: 'A web application for managing tasks and projects with real-time updates and collaboration features.',
     techStack: ['React', 'TypeScript', 'Tailwind CSS'],
     githubUrl: 'https://github.com/19mekdes/Task-Management.git',
     liveUrl: 'https://task-management-demo.com',
