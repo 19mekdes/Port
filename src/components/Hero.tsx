@@ -31,11 +31,11 @@ const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
       <div className="max-w-7xl mx-auto text-center">
         {/* Profile Image */}
         <div className="mb-8">
-          <div className="w-40 h-40 mx-auto relative">
+          <div className="w-50 h-50 mx-auto relative">
             <img
               src="./images/mekdi.jpg"
               alt="Profile"
-              className="rounded-full object-cover w-full h-full border-4 border-white shadow-xl"
+              className="rounded-full object-cover w-full h-full border-3 border-white shadow-xl"
             />
             <div className="absolute inset-0 rounded-full ring-2 ring-blue-400 ring-offset-2" />
           </div>

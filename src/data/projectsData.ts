@@ -20,24 +20,24 @@ export const projectsData: Project[] = [
     liveUrl: 'https://book-review-demo.com',
     imageUrl: '/images/BookReview.jpg',  
   },
+  
   {
     id: 3,
-    title: 'Doctor Appointment System',
-    description: 'A web-based application for scheduling and managing doctor appointments.',
-    techStack: ['React', 'Node.js','Express.js', 'MongoDB'],
-    githubUrl: 'https://github.com/19mekdes/doctor-appointment-website.git',
-    liveUrl: 'https://doctor-appointment-demo.com',
-    imageUrl: '/images/Bookappointementwithdoctors.jpg',  
-  },
-
-  {
-    id: 4,
     title: 'Dental Clinic Management System',
     description: 'A comprehensive solution for managing dental clinic operations, including patient records, appointment scheduling, and treatment tracking.',
     techStack: ['React', 'Bootstrap CSS', 'NODE.js', 'MongoDB'],
     githubUrl: 'https://github.com/19mekdes/Tana-Med-Solution.git',
     liveUrl: 'https://dental-clinic-demo.com',
     imageUrl: '/images/dental-clinic.jpg',
+  },
+  {
+    id: 4,
+    title: 'Doctor Appointment System',
+    description: 'A web-based application for scheduling and managing doctor appointments.',
+    techStack: ['React', 'Node.js','Express.js', 'MongoDB'],
+    githubUrl: 'https://github.com/19mekdes/doctor-appointment-website.git',
+    liveUrl: 'https://doctor-appointment-demo.com',
+    imageUrl: '/images/Bookappointementwithdoctors.jpg',  
   },
   {
     id: 5,
