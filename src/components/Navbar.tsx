@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 interface NavbarProps {
   activeSection: string;
   onNavClick: (section: string) => void;
