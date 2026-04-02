@@ -9,7 +9,6 @@ const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
-  // Intersection Observer for animating the name
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
