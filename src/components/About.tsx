@@ -53,7 +53,7 @@ const About: React.FC = () => {
           <motion.div variants={itemVariants} className="pt-6 flex justify-center">
             <motion.a
               href="/cv.pdf"
-              target="_blank"       // Opens the CV in a new tab
+              target="_blank"      
              rel="noopener noreferrer"
               download
               whileHover={{ scale: 1.05 }}
