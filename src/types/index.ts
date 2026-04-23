@@ -1,4 +1,3 @@
-
 export interface Project {
   id: number;
   title: string;
@@ -9,7 +8,6 @@ export interface Project {
   imageUrl?: string;
   featured?: boolean;
 }
-
 export interface Skill {
   name: string;
   level?: number;
@@ -19,7 +17,6 @@ export interface SkillCategory {
   category: string;
   skills: Skill[];
 }
-
 export interface IContactFormData {  
   name: string;
   email: string;
