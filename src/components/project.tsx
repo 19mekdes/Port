@@ -9,7 +9,6 @@ const Projects: React.FC = () => {
     threshold: 0.1,
   });
 
-  // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
   const projectsPerPage = 3;
 
