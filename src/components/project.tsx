@@ -12,7 +12,6 @@ const Projects: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const projectsPerPage = 3;
 
-  // Calculate pagination
   const indexOfLastProject = currentPage * projectsPerPage;
   const indexOfFirstProject = indexOfLastProject - projectsPerPage;
   const currentProjects = projectsData.slice(indexOfFirstProject, indexOfLastProject);
