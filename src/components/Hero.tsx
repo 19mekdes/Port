@@ -4,7 +4,6 @@ import { TypeAnimation } from 'react-type-animation';
 interface HeroProps {
   onCtaClick: () => void;
 }
-
 const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
