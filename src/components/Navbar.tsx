@@ -3,7 +3,6 @@ interface NavbarProps {
   activeSection: string;
   onNavClick: (section: string) => void;
 }
-
 const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavClick }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
